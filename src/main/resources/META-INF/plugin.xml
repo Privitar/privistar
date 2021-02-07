@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>com.privitar.privistar</id>
+    <name>Privistar</name>
+    <vendor email="xavier.rasschaert@privitar.com" url="https://www.privitar.com/">Privitar</vendor>
+
+    <description><![CDATA[
+    Progress bar with your favorite Privistar
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+    <application-components>
+        <component>
+            <implementation-class>com.privitar.privistar.PrivistarApplicationComponent</implementation-class>
+        </component>
+    </application-components>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable instance="com.privitar.privistar.settings.AppSettingsConfigurable"
+            id="org.intellij.sdk.settings.AppSettingsConfigurable"
+            displayName="Privistar Progress Bar"/>
+        <applicationService serviceImplementation="com.privitar.privistar.settings.AppSettingsState"/>
+    </extensions>
+</idea-plugin>
