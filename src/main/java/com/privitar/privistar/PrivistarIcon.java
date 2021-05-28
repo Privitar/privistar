@@ -6,6 +6,10 @@ import javax.swing.Icon;
 public enum PrivistarIcon {
     NYAN,
     FEDE,
+    INTENSE_MELLOR,
+    HENRY,
+    FLYING_HENRY,
+    SPENCE,
     PAUL;
 
     public Icon getForwardIcon() {
